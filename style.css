@@ -1,0 +1,69 @@
+#wrap {
+	width: 500px;
+	margin: 150px auto;
+	position: relative;
+}
+
+#game {
+	margin-top: 10px;
+}
+
+.cell {
+	/* background: pink; */
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.gopher,
+.bomb {
+	width: 150px;
+	height: 150px;
+	bottom: 0;
+	position: absolute;
+	transition: bottom 1s;
+}
+
+.gopher {
+	background: url(image/gopher.png) center center no-repeat;
+	background-size: 150px 150px;
+}
+
+.dead {
+	background: url(image/dead_gopher.png) center center no-repeat;
+	background-size: 150px 150px;
+}
+
+.bomb {
+	background: url(image/bomb.png) center center no-repeat;
+	background-size: 150px 150px;
+}
+
+.boom {
+	background: url(image/explode.png) center center no-repeat;
+	background-size: 150px 150px;
+}
+
+.hidden {
+	bottom: -150px;
+}
+
+.hole {
+	background: url(image/mole-hole.png) center center no-repeat;
+	width: 150px;
+	height: 110px;
+	position: absolute;
+	bottom: 0;
+	background-size: 150px 110px;
+}
+
+.hole-front {
+	background: url(image/mole-hole-front.png) center center no-repeat;
+	width: 150px;
+	height: 20px;
+	position: absolute;
+	bottom: 0;
+	background-size: 150px 20px;
+}
