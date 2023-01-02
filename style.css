@@ -1,7 +1,15 @@
 #wrap {
-	width: 500px;
-	margin: 150px auto;
+	width: 100%;
+	height: 100vh;
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#wrap-inner {
+	position: relative;
+	display: inline-block;
 }
 
 #game {
@@ -66,4 +74,50 @@
 	position: absolute;
 	bottom: 0;
 	background-size: 150px 20px;
+}
+
+@media screen and (max-width: 539px) {
+	.cell {
+		width: 100px;
+		height: 100px;
+	}
+
+	.gopher,
+	.bomb {
+		width: 100px;
+		height: 100px;
+	}
+
+	.gopher {
+		background-size: 100px 100px;
+	}
+
+	.dead {
+		background-size: 100px 100px;
+	}
+
+	.bomb {
+		background-size: 90px 100px;
+	}
+
+	.boom {
+		background: url(image/explode.png) center center no-repeat;
+		background-size: 100px 100px;
+	}
+
+	.hidden {
+		bottom: -100px;
+	}
+
+	.hole {
+		width: 100px;
+		height: 80px;
+		background-size: 100px 80px;
+	}
+
+	.hole-front {
+		width: 100px;
+		height: 17px;
+		background-size: 100px 17px;
+	}
 }

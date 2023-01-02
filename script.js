@@ -23,9 +23,9 @@ $start.addEventListener('click', () => {
 		time = (time * 10 - 1) / 10; // time -= 0.1 로 해줄 수 도 있지만 컴퓨터는 소수점 계산시 문제가 있기에 이와같은 식으로 처리
 		$timer.textContent = time;
 		if (time === 0) {
+			clearInterval(timerId);
+			clearInterval(tickId);
 			setTimeout(() => {
-				clearInterval(timerId);
-				clearInterval(tickId);
 				alert(`게임 오버! 점수는 ${score}점`);
 				score = 0;
 				$score.textContent = score;
